@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linceu"
+dynamic = ["version"]
+description = "Infraestrutura para Whole Slide Imaging (WSI): leitura de TIFF/BigTIFF, calibração de scanner e microscópio, e extração de ROIs a partir do campo óptico equivalente."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Felipe Secundino", email = "secundinofelipe@ufu.br" }]
+keywords = ["whole slide imaging", "WSI", "BigTIFF", "histopathology", "microscopy", "calibration", "ROI"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Image Processing",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Typing :: Typed",
+]
+dependencies = [
+    "numpy>=1.24",
+    "tifffile>=2025.5.10",
+    "zarr>=3.0",
+    "imagecodecs>=2024.1.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov>=4.0", "mypy>=1.5", "ruff>=0.4", "build>=1.0"]
+
+[project.urls]
+Homepage = "https://github.com/secundinofelipe/linceu"
+Issues = "https://github.com/secundinofelipe/linceu/issues"
+Changelog = "https://github.com/secundinofelipe/linceu/blob/main/CHANGELOG.md"
+
+[tool.setuptools.dynamic]
+version = { attr = "linceu.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["linceu*"]
+
+[tool.setuptools.package-data]
+linceu = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["testes", "linceu"]
+addopts = "--doctest-modules"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_unused_ignores = true
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+extend-exclude = ["*.md"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "RUF"]
+
+[tool.ruff.lint.per-file-ignores]
+# __all__ agrupado por subpacote, de propósito (legibilidade > ordem alfabética)
+"**/__init__.py" = ["RUF022"]
