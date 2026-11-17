@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-message: "Se você usar este software, cite-o como abaixo."
-title: "linceu: infraestrutura para Whole Slide Imaging (WSI)"
+message: "Se você usar este software, cite o artigo abaixo."
 type: software
+title: "Linceu"
 version: 2.1.0
-date-released: "2026-11-17"
+date-released: 2026-11-17
 license: MIT
 repository-code: "https://github.com/secundinofelipe/linceu"
 abstract: >-
@@ -11,11 +11,52 @@ abstract: >-
   microscópio, e extração de regiões de interesse (ROI) a partir do campo
   óptico equivalente do microscópio.
 keywords:
-  - whole slide imaging
+  - Whole Slide Imaging
   - BigTIFF
-  - histopathology
-  - calibration
+  - Computational Pathology
+  - Leprosy
 authors:
-  - family-names: "Secundino"
-    given-names: "Felipe"
-    affiliation: "Universidade Federal de Uberlândia (UFU)"
+  - family-names: Secundino
+    given-names: Felipe Mendes
+    orcid: https://orcid.org/0000-0003-1677-2008
+    affiliation: Universidade Federal de Uberlândia
+preferred-citation:
+  type: conference-paper
+  title: "Linceu: A Metrologically Calibrated Computational Pathology Framework for Topology-Aware Tissue Segmentation in Leprosy Whole Slide Images"
+  authors:
+    - family-names: Secundino
+      given-names: Felipe Mendes
+      orcid: https://orcid.org/0000-0003-1677-2008
+      affiliation: Universidade Federal de Uberlândia
+    - family-names: Goulart
+      given-names: Isabela Maria Bernardes
+      orcid: https://orcid.org/0000-0003-2319-3223
+      affiliation: Universidade Federal de Uberlândia
+    - family-names: Dornelas
+      given-names: Bruno de Carvalho
+      orcid: https://orcid.org/0000-0003-1404-8876
+      affiliation: Universidade Federal de Uberlândia
+    - family-names: Patrocinio
+      given-names: Ana Claudia
+      orcid: https://orcid.org/0000-0001-9376-7689
+      affiliation: Universidade Federal de Uberlândia
+    - family-names: Carneiro
+      given-names: Pedro Cunha
+      orcid: https://orcid.org/0000-0002-0120-5273
+      affiliation: Universidade Federal de Uberlândia
+  collection-title: "Anais do XVII Simpósio de Engenharia Biomédica (SEB 2026)"
+  conference:
+    name: "XVII Simpósio de Engenharia Biomédica (SEB 2026)"
+    city: Uberlândia
+    region: MG
+    country: BR
+    date-start: 2026-09-21
+    date-end: 2026-09-23
+  publisher:
+    name: Zenodo
+  year: 2026
+  date-published: 2026-10-13
+  doi: 10.5281/zenodo.23338778
+  url: "https://zenodo.org/records/23338778"
+  languages:
+ 
